@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>答题系统</title>
+<link href="bootstrap.css" type="text/css" rel="stylesheet">
+<link href="result.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div id="box">
+		<div id="box_inner">
+			<div id="title">
+				<h1>考试结果</h1>
+				<div id="score_panel">
+					<span id="score_str">分数: </span><span id="score" th:text="${score}">100</span>
+				</div>
+			</div>
+			
+			
+			<div id="box_result">
+
+				<div class="result">
+					<h5>一、单项选择题（本大题有20小题，每小题 2分，共 40分）</h5>
+					<ul th:each="examResult : ${examResultSingleton}">
+						<li>
+							<p th:text="${examResult.title}"></p> 正确答案：<span
+							th:text="${examResult.answer}"></span> 决定答案：<span
+							th:text="${examResult.ChangeAnswer}"></span>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="result">
+					<h5>二、多项选择题（本大题有10小题，每小题 4分，共 40分）</h5>
+					<ul th:each="examResult : ${examResultDouble}">
+						<li>
+							<p th:text="${examResult.title}"></p> 正确答案：<span
+							th:text="${examResult.answer}"></span> 决定答案：<span
+							th:text="${examResult.ChangeAnswer}"></span>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="result">
+					<h5>三、判断题（本大题有10小题，每小题 2分，共 20分）</h5>
+					<ul th:each="examResult : ${examResultEstimate}">
+						<li>
+							<p th:text="${examResult.title}"></p> 正确答案：<span
+							th:text="${examResult.answer}"></span> 决定答案：<span
+							th:text="${examResult.ChangeAnswer}"></span>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+			
+			<div id="exam">
+			  <a href="/">继续考试</a>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

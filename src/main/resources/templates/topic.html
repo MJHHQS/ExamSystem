@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>答题系统</title>
+<link href="bootstrap.css" type="text/css" rel="stylesheet">
+<link href="topic.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div id="box">
+		<div id="box_inner">
+			<div id="title">
+				<h1>Java面试题</h1>
+				<div id="time">
+					<p>考试时间40分钟 ， 总分100</p>
+				</div>
+			</div>
+			<br /> <br />
+			<hr />
+			<form action="/commit" enctype="application/x-www-form-urlencoded"
+				method="post">
+				<div id="topic_box">
+
+					<div class="topic">
+						<h5>一、单项选择题（本大题有20小题，每小题 2分，共 40分）</h5>
+
+						<div id="items" th:each="topic,iterStat : ${SINGLETON}">
+
+							<div class="item">
+								<p th:text="${topic.title}"></p>
+								<ul th:each="change,iterStatchange : ${topic.changes}">
+									<li><span class="span_radio"><input type="radio"
+											th:name="${#strings.concat('SINGLETON',iterStat.index)}"
+											th:value="${topic.changeValues[iterStatchange.index]}"></span>
+										&nbsp; <span th:text="${change}">A. int</span></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+
+
+					<div class="topic">
+						<h5>二、多项选择题（本大题有10小题，每小题 4分，共 40分）</h5>
+						<div id="items" th:each="topic,iterStat : ${DOUBLE}">
+
+							<div class="item">
+								<p th:text="${topic.title}"></p>
+								<ul th:each="change,iterStatchange : ${topic.changes}">
+									<li><span class="span_radio"><input type="checkbox"
+											th:name="${#strings.concat('DOUBLE',iterStat.index)}"
+											th:value="${topic.changeValues[iterStatchange.index]}"></span>&nbsp;
+										<span th:text="${change}">A. int</span></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+
+					<div class="topic">
+						<h5>三、判断题（本大题有10小题，每小题 2分，共 20分）</h5>
+						<div id="items" th:each="topic,iterStat : ${ESTIMATE}">
+
+							<div class="item">
+								<p th:text="${topic.title}"></p>
+								<ul th:each="change,iterStatchange : ${topic.changes}">
+									<li><span class="span_radio"><input type="radio"
+											th:name="${#strings.concat('ESTIMATE',iterStat.index)}"
+											th:value="${topic.changeValues[iterStatchange.index]}"></span>&nbsp;
+										<span th:text="${change}">A. int</span></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div>
+
+
+				</div>
+				<hr />
+				<div id="exam_commit">
+					<p id="exam_commit_p">已到时间 ， 提交考试</p>
+					<input type="submit" value="提交" />
+				</div>
+			</form>
+
+
+
+
+		</div>
+	</div>
+
+	<div id="exam_time">00:00</div>
+	<script type="text/javascript" src="topic.js"></script>
+
+</body>
+</html>

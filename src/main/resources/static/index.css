@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+body , html {
+	font-family: serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+#box {
+	color: blue
+}
+
+#box_inner {
+	text-align: center; 
+	overflow: hidden;
+	margin: 20px auto;
+	color: blue;
+	width: 624px;
+}
+
+#title h1{
+	font-size: 29px ; 
+}
+
+#time {
+	color: red;
+	margin-left: -142px ; 
+	font-size: 12px ; 
+}
+
+
+#start {
+	margin: 100px 100px  ; 
+}
+
+#start a {
+	display: inline-block;
+	background-color: red ; 
+	color: white;
+	border-radius: 100px ; 
+	width: 100px ; 
+	height: 20px ; 
+	line-height: 20px ; 
+}
+
+#topic {
+	margin: 100px 100px  ; 
+}
+
+#topic a {
+	display: inline-block;
+	width: 100px ; 
+	height: 20px ; 
+	line-height: 20px ; 
+}

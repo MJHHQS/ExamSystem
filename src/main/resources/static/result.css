@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+body , html {
+	font-family: serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+#box {
+	color: black;
+}
+
+#box_inner {
+	text-align: center; 
+	overflow: hidden;
+	margin: 20px auto;
+	color: black;
+	width: 624px;
+}
+
+#title h1{
+	font-size: 29px ; 
+}
+
+#score_panel {
+	font-size: 22px ; 
+	margin-top: 40px ; 
+}
+
+#score_str {
+	font-size: 22px ;  
+	color:#adb5bd;
+}
+
+#score {
+	font-size: 40px ; 
+	color: red;
+	position: relative;
+	top:5px ; 
+}
+
+#box_result {
+	margin-top: 10px ; 
+	
+}
+
+.result {
+	margin-top: 55px ; 
+}
+
+h5 {
+	text-align: left;
+}
+
+ul li {
+	border-bottom: solid 5px;
+	text-align: left;
+}
+
+
+#exam a {
+	display: inline-block;
+	background-color: red ; 
+	color: white;
+	border-radius: 100px ; 
+	width: 100px ; 
+	height: 20px ; 
+	line-height: 20px ; 
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>答题系统</title>
+<link href="bootstrap.css" type="text/css" rel="stylesheet">
+<link href="store.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<div id="box">
+		<div id="box_inner">
+			<div id="title">
+				<h1>添加题目</h1>
+			</div>
+			<br /> <br />
+			<hr />
+			<form action="/store" enctype="application/x-www-form-urlencoded"
+				method="post">
+				<div id="topic_box">
+
+					<div class="topic">
+						
+						<div id="items">
+							<div class="item">
+								<p></p>
+								<ul>
+									<li><span class="span_item">title</span> &nbsp;<span class="span_radio">
+									   <textarea rows="5" cols="40" name="title"></textarea></span></li>
+									<li><span class="span_item">Set</span> &nbsp;<span class="span_radio">
+									  java<input type="radio" name="set_" value="1" checked="checked">&nbsp;
+									  html/css<input type="radio" name="set_" value="2">
+									</span></li>
+									
+									<li><span class="span_item">Type</span> &nbsp;<span class="span_radio">
+									  单项选择题<input type="radio" name="type" value="0" checked="checked">&nbsp;
+									  多项选择题<input type="radio" name="type" value="1">&nbsp;
+									  判断题<input type="radio" name="type" value="2">
+									</span></li>
+									
+									<li><span class="span_item">content</span> &nbsp;<span class="span_radio">
+									   <textarea rows="5" cols="40" name="content"></textarea></span></li>
+									<li><span class="span_item">answer</span> &nbsp;<span class="span_radio">
+									   <textarea rows="5" cols="40" name="answer"></textarea></span></li>
+									
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<hr />
+				<input type="submit" value="提交" />
+			</form>
+
+
+
+
+		</div>
+	</div>
+
+</body>
+</html>
