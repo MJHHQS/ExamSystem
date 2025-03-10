@@ -9,19 +9,26 @@ import org.springframework.util.StringUtils;
 
 //@SpringBootTest
 class ExamSystemApplicationTests {
-	
+
 	@Test
 	void context1() {
-		System.out.println(TopicPareIndex("SINGLETON10" , "SINGLETON"));
-	//	System.out.println(Integer.valueOf("SINGLETON10".substring("SINGLETON10".lastIndexOf("SINGLETON")+"SINGLETON".length())));
+		int i = 0 ; 
+		System.out.println(i++ + ++i + i++ + i++ + ++i) ;  
+		// System.out.println(i++);				0
+		// System.out.println((i++) + (i++)) ;  1
+		// System.out.println((++i) + (i++)) ;  2 
+		// System.out.println((++i) + (++i)) ;  3 
+
+	 //	System.out.println(TopicPareIndex("SINGLETON10" , "SINGLETON"));
+	 // System.out.println(Integer.valueOf("SINGLETON10".substring("SINGLETON10".lastIndexOf("SINGLETON")+"SINGLETON".length())));
 	 // System.out.println(Arrays.toString("A. public".split("\\.")));
 	}
-	
+
 	public int TopicPareIndex(String name , String previ) {
 		return Integer.valueOf(name.substring(name.lastIndexOf(previ)+previ.length()));
 	}
-	
-//A. int|-|B. float|-|C. String|-|D. boolean
+
+    //A. int|-|B. float|-|C. String|-|D. boolean
 	@Test
 	void context() {
 		String str = "A. int|-|B. float|-|C. String|-|D. boolean" ; 
