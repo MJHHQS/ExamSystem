@@ -15,7 +15,7 @@ public interface TopicMapper {
 	@Insert("insert into topic_table (title,answer,content,set_ ,type) "
 			+ "values (#{title} , #{answer}, #{content}, #{set_}, #{type})")
 	public void insertTopic(Topic topic) ; 
-	
+	 
 	@Select("select tid , title , answer , content , set_  , type from topic_table where "
 			+ "set_ = #{set_} and type = #{type} limit #{start} , #{offset}")
 	public List<Topic> TopicS(@Param("set_") int set , @Param("type") int type , 
